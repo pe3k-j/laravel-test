@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AwardController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [IndexController::class, 'index']);
 
 Route::get('/awards', [AwardController::class, 'index']);
+
+Route::get('/movies', [MovieController::class, 'index']);
