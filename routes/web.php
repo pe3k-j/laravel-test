@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AwardController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MovieController;
@@ -21,3 +22,5 @@ Route::get('/', [IndexController::class, 'index']);
 Route::get('/awards', [AwardController::class, 'index']);
 
 Route::get('/movies', [MovieController::class, 'index']);
+
+Route::get('/about-us', [AboutController::class, 'aboutUs']);
