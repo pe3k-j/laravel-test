@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 
 class AboutController extends Controller
 {
-    //
     public function aboutUs()
     {
         $authors = [
@@ -30,8 +30,7 @@ class AboutController extends Controller
                 'position' => 'Team leader'
             ]
         ];
-        $view = view('about-us', ['authors' => $authors]);
 
-        return $view;
+        return view('about-us', compact('authors'));
     }
 }

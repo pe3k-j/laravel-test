@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>List of awards</title>
+    <title>Document</title>
 </head>
 <body>
 
-    <a href="/">Home</a>
-
-    <h1>List of movie awards</h1>
-
-    <h1>Hello, <?= $name ?> and <?= $greeting ?></h1>
+    <h1>Top rated movies</h1>
 
     <ul>
-        <?php foreach ($awards as $award) : ?>
+        <?php foreach ($movies as $movie) : ?>
             <li>
-                <?= $award; ?>
+                <?= $movie->name ?>
+                (<?= $movie->year ?>)
+
+                - <?= $movie->rating ?>/10
             </li>
         <?php endforeach; ?>
     </ul>

@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 class AwardController extends Controller
 {
-    //
     public function index()
     {
+        $greeting = 'world';
+
         $awards = [
             'Oscars',
             'Golden Globes',
@@ -14,8 +17,22 @@ class AwardController extends Controller
             'Emmy'
         ];
 
-        $view = view('awards.index', ['awards' => $awards]);
+        $name = 'Jan';
 
-        return $view;
+        // /resouces/views/awards/index.blade.php
+        //                 awards.index
+        return view('awards.index', compact(
+            'greeting',
+            'name',
+            'awards'
+        ));
+
+
+        // equivalent 2nd argument:
+        // [
+        //     'greeting'  => $greeting,
+        //     'name'      => $name,
+        //     'awards'    => $awards
+        // ]
     }
 }
